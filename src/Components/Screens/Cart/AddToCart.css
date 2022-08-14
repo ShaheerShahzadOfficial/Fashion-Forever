@@ -1,0 +1,205 @@
+.emptyCart {
+  margin: auto;
+  text-align: center;
+  padding: 10vmax;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.emptyCart > svg {
+  font-size: 6vmax;
+  color: blue;
+}
+.emptyCart > p {
+  font: 600 1.8vmax "Roboto";
+  padding: 1vmax 3vmax;
+
+}
+.emptyCart > a {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  border: none;
+  padding: 1vmax 3vmax;
+  cursor: pointer;
+  font: 600 1.5vmax "Roboto";
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+.cardPage{
+    padding: 5vmax;
+}
+
+.cartHeader{
+  background-image: linear-gradient(to right top, #079ae7, #008fe9, #0084ea, #0077ea, #006ae7, #0075ef, #007ff7, #008aff, #00acff, #00caff, #00e4fe, #5ffbf1);
+  width: 90%;
+    box-sizing: border-box;
+    color: white;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 4fr 1fr 1fr;
+font: 600 1.3vmax "Roboto";
+
+}
+
+.cartHeader > p{
+    margin: 20px;
+}
+
+.cartHeader >p:last-child{
+    text-align: end;
+}
+
+.cartContainer{
+    width: 90%;
+    margin: auto;
+    grid-template-columns: 4fr 1fr 1fr;
+display: grid;
+}
+
+.cardInput{
+display: flex;
+height: 8vmax;
+align-items: center;
+}
+
+.cardInput > button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.616);
+    padding: 0.5vmax;
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s;
+  }
+  .cardInput > button:hover {
+    background-color: rgba(0, 0, 0, 0.767);
+  }
+  
+  .cardInput > input {
+    border: none;
+    padding: 0.5vmax;
+    width: 3vmax;
+    text-align: center;
+    outline: none;
+    font: 400 1.2vmax "Roboto";
+    color: rgba(0, 0, 0, 0.74);
+  }
+
+.cardInput > input{
+    background-image: none;
+    background-color: white;
+    color: black;
+}
+
+.cardInput > input::placeholder{
+    color: black;
+}
+
+.cartSubTotal{
+    display: flex;
+    padding:0.5vmax;
+    justify-content: flex-end;
+    color: rgba(0, 0, 0, 0.74);
+    font: 800 1.1vmax "Roboto";
+    box-sizing: border-box;
+    align-items: center;
+    height: 5vmax;
+}   
+
+
+.GrossTotal{
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+}
+.GrossTotalBox{
+    border-top: 3px solid blue;
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin: 1vmax  4vmax;
+    display: flex;
+    padding: 2vmax 0vmax;
+    font-weight: 700;
+}
+
+.CheckOutBtn{
+    justify-content: flex-end;
+    display: flex;
+}
+
+.CheckOutBtn > button{
+  background-image: linear-gradient(to right top, #079ae7, #008fe9, #0084ea, #0077ea, #006ae7, #0075ef, #007ff7, #008aff, #00acff, #00caff, #00e4fe, #5ffbf1);
+  color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 0.8vmax 4vmax;
+    cursor: pointer;
+    margin: 1vmax  4vmax;
+    width: 50%;
+    font: 400 1vmax "Roboto";
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .cardPage {
+      padding: 0;
+      min-height: 60vh;
+    }
+  
+    .cartHeader {
+      width: 100%;
+      font: 300 1.7vmax "Roboto";
+      margin-top: 8vmax;
+      grid-template-columns: 3fr 1fr 1fr;
+    }
+  
+    .cartContainer {
+      width: 100%;
+      grid-template-columns: 3fr 1fr 1fr;
+    }
+  
+    .cardInput {
+      height: 20vmax;
+    }
+  
+    .cardInput > button {
+      padding: 1vmax;
+      width: 3vmax;
+
+    }
+  
+    .cardInput > input {
+      width: 2.3vmax;
+      /* padding: 1vmax; */
+      font: 400 1.25vmax "Roboto";
+    }
+  
+    .cartSubTotal {
+      padding: 1.5vmax;
+      height: 15vmax;
+      font: 300 2vmax "Roboto";
+    }
+  
+    .GrossTotal {
+      display: grid;
+      grid-template-columns: 0fr 2fr;
+    }
+  
+    .GrossTotalBox {
+      padding: 2vmax;
+      font: 300 2vmax "Roboto";
+    }
+  
+    .CheckOutBtn > button {
+      padding: 2vmax 4vmax;
+      width: 100%;
+      font: 300 2vmax "Roboto";
+    }
+  }

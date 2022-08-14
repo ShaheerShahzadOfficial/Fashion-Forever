@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+
+
+
+footer{
+    background-color: rgb(22, 21, 21);
+    margin-top: 10vmax;
+    padding: 1.5vmax;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: -2.5vmax;
+}
+
+
+#instagram{
+    margin-right: 20px;
+    font-size: 25px;
+    /* color: red; */
+    text-align: center;
+    color: white ;
+    display: inline-block;
+
+}
+
+
+#whatsapp{
+    margin-right: 20px;
+    font-size: 25px;
+    /* color: green; */
+    color: white ;
+    text-align: center;
+    display: inline-block;
+
+    
+}
+#facebook{
+    margin-right: 20px;
+    font-size: 25px;
+    /* color: blue ; */
+    color: white ;
+    text-align: center;
+    display: inline-block;
+}
+
+.leftFooter{
+width: 60%;
+text-align: center;
+margin: 1.5vmax;
+
+}
+
+.leftFooter h4{
+font-size: 3.6vmax;
+color: rgb(0, 157, 255);
+font-family: "Roboto";
+  }
+
+
+
+
+    .leftFooter h5{
+        max-width: 60%;
+margin: 2vmax auto;
+transition: 1s;
+            }
+
+.rightFooter{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+align-items: center;    
+transition: 1s;
+}
+.rightFooter h5{
+font-size: 2vmax  ;    
+text-decoration: underline;
+}
+
+.rightFooter h5:hover{
+    color:rgb(0, 157, 255)
+}
+
+
+.Section2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+#instagram:hover{
+
+color: rgb(255, 3, 255);
+
+}
+
+#whatsapp:hover{
+    color: rgb(0, 255, 0);
+}
+
+#facebook:hover{
+color:lightseagreen;
+}
+
+
+
+@media only screen and (max-width: 1250px) {
+    footer{
+        margin-bottom: -5vmax;
+    }
+}

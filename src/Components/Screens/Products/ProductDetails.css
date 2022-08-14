@@ -1,0 +1,255 @@
+h2{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  /* margin-top: 10px; */
+}
+.card {
+  box-shadow: 5px 5px 5px 5px #ada7a7;
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  padding: 10px;
+}
+
+.card:hover{
+  transform: translateY(-1vmax);
+  box-shadow: 10px 10px 10px 10px #ada7a7;
+
+}
+
+.card > .Carousel{
+width: 100%;
+margin: auto;
+}
+
+.price {
+  /* color: grey; */
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.card > p > button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: red;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card > p > button:hover {
+  opacity: 0.7; 
+}
+img{
+  width:100%;
+}
+
+.Red{
+  color: red;
+  font-weight: bold;
+  padding: 2px;
+  border:3px solid red;
+}
+.Green{
+  color: rgb(0, 255, 0);
+  font-weight: bold;
+  padding: 2px;
+  border:3px solid rgb(0, 255, 0);
+}
+
+
+.Review_Container{
+  /* background-image: linear-gradient(90deg,rgba(0,0,255,1) 62%, rgba(4,148,235,1) 100%); */
+  /* width: 60; */
+  margin: auto;
+  /* height: 100%; */
+padding:1vmax;
+}
+
+.cards{
+  max-width: 100%;
+  margin: auto;
+  font-family: arial;
+  padding: 5vmax;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+color: white;
+background-color: black;
+
+}
+
+
+
+
+.homeHeading{
+  text-align:center;
+  font-family: "Roboto";
+  font-size: 1.8vmax;
+  border-bottom: 1px solid rgba(21, 21, 21, 0.5);
+  width: 20vmax;
+  padding: 1vmax;
+margin: 3vmax auto;
+color: rgb(0, 0, 0);
+}
+
+
+
+
+.quantityIncrease{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+.quantityIncrease > p{
+  color: black;
+text-align: center;
+margin:30px;
+font-size: 2vmax;
+font-weight: bolder}
+
+
+.Review_Container > button{
+  margin-bottom: 5vmax;
+  cursor: pointer;
+  /* background-image: linear-gradient(90deg, rgba(0,0,0,1) 13%, rgba(0,0,255,1) 62%, rgba(4,148,235,1) 100%); */
+  background-color: blue;
+  border: 1px solid black ;
+  border-radius: 0;
+  color: white;
+padding:1vmax ;
+transition: all 0.5s;
+width: 11vmax;
+font: 500 1.6vmax "Roboto";
+float: right;
+margin-right: 3vmax;
+}
+
+.Review_Container > button:hover{
+background-color: rgb(0, 195, 255);
+color: black;
+}
+
+
+
+.detailsBlock-3-1 {
+  display: flex;
+  width: 90%;
+  align-items: center;
+}
+
+.detailsBlock-3-1-1 > button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.616);
+  padding: 0.5vmax;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+}
+.detailsBlock-3-1-1 > button:hover {
+  background-color: rgba(0, 0, 0, 0.767);
+}
+
+.detailsBlock-3-1-1 > input {
+  border: none;
+  width: 4vmax;
+  text-align: center;
+  outline: none;
+  font: 400 1.5vmax "Roboto";
+  color: rgba(0, 0, 0);
+}
+
+
+.detailsBlock-3-1 > button {
+width: 100%;
+border: none;
+cursor: pointer;
+color: white;
+background-image: linear-gradient(to right top, #079ae7, #008fe9, #0084ea, #0077ea, #006ae7, #0075ef, #007ff7, #008aff, #00acff, #00caff, #00e4fe, #5ffbf1);
+padding: 1vmax;
+margin: 2vmax;
+outline: none;
+border-radius: 30px;
+font: bolder 1.4vmax "Roboto";
+}
+
+
+.detailsBlock-3-1 {
+  flex-direction: column;
+}
+
+.detailsBlock-3-1-1 {
+  padding: 2vmax 0;
+}
+.detailsBlock-3-1-1 > button {
+  padding: 1vmax;
+  width: 4vmax;
+}
+    
+.input {
+  /* padding: 1.5vmax; */
+  width: 3vmax;
+  font: 400 1.8vmax "Roboto";
+  background-image: none;
+  background-color: white;
+  color: black;
+}
+
+/* .detailsBlock-3-1 > button:last-child {
+  font: 500 1.7vmax "Roboto";
+  padding: 1.2vmax;
+  width: 80%;
+  margin: 3vmax 0;
+} */
+
+.NoReview{
+  margin-top: 2vmax;
+  font-size: 1.8vmax;
+  font-weight: bolder;
+}
+
+.submitDialog {
+  display: flex;
+  flex-direction: column;
+}
+.submitDialogTextArea {
+  border: 2px solid green;
+  margin: 1vmax 0;
+  outline: none;
+  padding: 1rem;
+  font: 300 1rem "Roboto";
+}
+
+.btndisable{
+  background-image: grey;
+  background-color: grey;
+   color: white;
+
+}
+
+.cards > p {
+  text-align: center;
+  margin: 4vmax;
+}
+@media screen and (max-width: 600px) {
+  .detailsBlock-3-1-1 > input {
+    font-size: 2vmax;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .submitDialogTextArea{
+width: 16vmax;
+  }
+
+}
