@@ -32,7 +32,7 @@ const Home = () => {
     return (
         <Fragment>
             <div className="banner">
-                <h3>Welcome to Ecommerce</h3>
+                <h3>Welcome to Forever Fashion</h3>
                 <h1>
                     Find Amazing Product Here
                 </h1>

@@ -4,11 +4,11 @@ const Footer = () => {
     return (
         <footer>
             <div className="leftFooter">
-                <h4>  Fashion Forever  </h4>
+                <h4>  Forever Fashion  </h4>
                 <h5> Selling A Quality Product is our First Priority </h5>
             </div>
 
-            <div className="rightFooter">
+            <div className="rightFooter" id='rightFooter'>
                 <h5>  Follow Us On </h5>
                 <div className='Section2'>
                     <a href="https://www.instagram.com/shaheershahaan2022/" target={"_blank"} rel="noreferrer">          <i className="fa fa-instagram" id="instagram">   </i> </a>
