@@ -73,9 +73,10 @@ const AllProducts = ({ history }) => {
                     </Link>
 
                     <Button
-                        onClick={() =>
+                        onClick={() => {
                             dispatch(deleteProduct(params.getValue(params.id, "id")))
-                        }
+                            console.log(params.getValue(params.id, "id"))
+                        }}
                     >
                         <DeleteIcon />
                     </Button>

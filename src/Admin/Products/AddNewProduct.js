@@ -11,6 +11,7 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import { CREATE_NEW_PRODUCT_RESET } from '../../Components/Redux/Constants/constant';
 import { CreateNewProduct } from '../../Components/Redux/Actions/ProductsActions';
 import Swal from "sweetalert2"
+import Loader from "../../Components/config/Loader/loader"
 const AddNewProduct = ({ history }) => {
 
     const { success, loading } = useSelector(state => state.NewProduct)
@@ -27,7 +28,6 @@ const AddNewProduct = ({ history }) => {
         "Gadgets",
         "Bags",
         "Ladies Clothes",
-        "Shoes"
     ];
 
     const dispatch = useDispatch()
@@ -69,7 +69,7 @@ const AddNewProduct = ({ history }) => {
 
     return (
         <Fragment>
-            <div className="dashboard">
+            {loading ? <Loader /> : <div className="dashboard">
                 <Slider />
                 <div className="newProductContainer">
                     <form
@@ -158,7 +158,7 @@ const AddNewProduct = ({ history }) => {
                         </Button>
                     </form>
                 </div>
-            </div>
+            </div>}
         </Fragment>
     );
 };

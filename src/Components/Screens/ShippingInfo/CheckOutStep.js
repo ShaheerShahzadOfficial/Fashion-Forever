@@ -3,6 +3,7 @@ import { Step, StepLabel, Stepper, Typography } from '@mui/material'
 import React, { Fragment } from 'react'
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheck';
+import MetaData from "../../../MetaData";
 
 const CheckOutStep = ({ activeStep }) => {
     const step = [
@@ -23,6 +24,7 @@ const CheckOutStep = ({ activeStep }) => {
 
     return (
         <Fragment>
+            <MetaData title={"Check Out Order"} />
             <Stepper alternativeLabel activeStep={activeStep} style={stepStyles} >
 
                 {

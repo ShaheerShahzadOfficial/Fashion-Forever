@@ -3,7 +3,7 @@ import "./copyright.css"
 const CopyRight = () => {
     return (
         <div className='Container'>
-            <h3>CopyRight ©️ Shaheer Shahzad</h3>
+            <h3>CopyRight ©️ theforeverfashion.com</h3>
         </div>
     )
 }

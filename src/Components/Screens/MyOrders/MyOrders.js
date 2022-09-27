@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { Typography } from '@mui/material';
 import "./MyOrders.css"
+import MetaData from '../../../MetaData';
 
 const MyOrders = () => {
 
@@ -81,6 +82,7 @@ const MyOrders = () => {
 
     return (
         <Fragment>
+            <MetaData title={"My Orders"} />
             {
                 loading ? <Loader /> :
                     <Fragment>

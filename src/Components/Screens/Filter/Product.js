@@ -3,13 +3,12 @@ import "./Product.css"
 import React, { useEffect, Fragment, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import { GetProduct } from "../../Redux/Actions/ProductsActions"
-import { Circles } from 'react-loader-spinner'
 import { useParams } from "react-router-dom"
 import ProductCard from "./ProductCard"
 import Pagination from "react-js-pagination"
-import { Typography } from "@mui/material"
 import { Slider } from "@material-ui/core"
 import Loader from "../../config/Loader/loader"
+import MetaData from "../../../MetaData"
 const Products = () => {
     const [CurrentPage, setCurrentPage] = useState(1)
     const [Price, setPrice] = useState([0, 25000])
@@ -36,9 +35,8 @@ const Products = () => {
     }
 
     const PriceHandle = (e, newPrice) => {
-        // setTimeout(() => {
         setPrice(newPrice)
-        // }, 2000);
+
     }
 
     let count = filteredProductCount
@@ -46,13 +44,14 @@ const Products = () => {
     const Categories = [
         "Gadgets",
         "Bags",
-        "Ladies Clothes",
-        "Shoes"
+        "Ladies Clothes"
     ]
 
 
     return (
         <Fragment>
+            <MetaData title={"Products"} />
+
             <h1 className="homeHeading">Products</h1>
 
             <div className="container" id="container">

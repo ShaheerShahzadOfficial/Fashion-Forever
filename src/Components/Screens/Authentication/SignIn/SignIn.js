@@ -7,6 +7,7 @@ import Swal from 'sweetalert2'
 import Loader from '../../../config/Loader/loader'
 import AlternateEmailSharpIcon from '@mui/icons-material/AlternateEmailSharp';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
+import MetaData from '../../../../MetaData'
 const SignIn = ({ location }) => {
     const [Email, setEmail] = useState("")
     const [Password, setPassword] = useState("")
@@ -83,6 +84,7 @@ const SignIn = ({ location }) => {
                 <Loader />) : (
 
                 <div className="subContainer">
+                    <MetaData title={"Log In"} />
                     <h2>Sign In Form</h2>
                     <div className="formController">
                         <div>

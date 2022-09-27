@@ -158,19 +158,20 @@ export const GetAdminProduct = () => async (dispatch) => {
 
 export const deleteProduct = (id) => async (dispatch) => {
     dispatch({ type: DELETE_PRODUCT_REQUEST });
+    // https://foreverfashion.herokuapp.com
 
-
-    await axios.delete(`https://foreverfashion.herokuapp.com/products/deleteProduct/${id}`).then((result) => {
-        dispatch({
-            type: DELETE_PRODUCT_SUCCESS,
-            payload: result.data,
+    await axios.delete(`https://foreverfashion.herokuapp.com/products/deleteProduct/${id}`,
+        { withCredentials: true, credentials: "include", headers: { "Content-Type": "application/json" } }).then((result) => {
+            dispatch({
+                type: DELETE_PRODUCT_SUCCESS,
+                payload: result.data,
+            });
+        }).catch((err) => {
+            dispatch({
+                type: DELETE_PRODUCT_FAIL,
+                payload: err.response.data,
+            });
         });
-    }).catch((err) => {
-        dispatch({
-            type: DELETE_PRODUCT_FAIL,
-            payload: err.response.data,
-        });
-    });
 
 
 };

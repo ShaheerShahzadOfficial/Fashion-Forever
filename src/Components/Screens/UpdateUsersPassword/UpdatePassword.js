@@ -10,7 +10,7 @@ import { ClearError } from '../../Redux/Actions/ProductsActions'
 import { UPDATE_PASSWORD_RESET } from '../../Redux/Constants/constant'
 import userpng from "../../Image/user.png"
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
-
+import MetaData from "../../../MetaData"
 const UpdateUserPassword = () => {
 
     const dispatch = useDispatch()
@@ -78,6 +78,7 @@ const UpdateUserPassword = () => {
 
     return (
         <Fragment>
+            <MetaData title={"Update Password"} />
             {loading ? <Loader /> : <div className="mainContainers">
                 <div className="subContainers">
                     <h2 style={{ width: "80%" }}>Update Your Password</h2>

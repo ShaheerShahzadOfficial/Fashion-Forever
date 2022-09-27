@@ -1,120 +1,110 @@
-.mainContainer{
-    /* background-image: linear-gradient(90deg, rgba(0,0,0,1) 13%, rgba(0,0,255,1) 62%, rgba(4,148,235,1) 100%); */
-    display: flex;
-flex-direction: column;
-text-align: center;
-align-items: center;
-justify-content: center;
-margin-bottom:-10vmax;
-padding-bottom: 20vmax;
+.mainContainer {
+  /* background-image: linear-gradient(90deg, rgba(0,0,0,1) 13%, rgba(0,0,255,1) 62%, rgba(4,148,235,1) 100%); */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -10vmax;
+  padding-bottom: 20vmax;
 }
 
-
-.subContainer{
-    margin-top: 2vmax;
-    padding-top: 2vmax;
-/* margin-bottom: 5vmax; */
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-border: 3px solid black;
-margin-bottom: 5vmax;
-
+.subContainer {
+  margin-top: 2vmax;
+  padding-top: 2vmax;
+  /* margin-bottom: 5vmax; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border: 3px solid black;
+  margin-bottom: 5vmax;
 }
 
-.subContainer >h2{
-    color: rgba(0, 0, 0, 0.75);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.300);
-    width: 50%;
-    margin-right: auto;
-    margin-bottom: 2vmax;
+.subContainer > h2 {
+  color: rgba(0, 0, 0, 0.75);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  width: 50%;
+  margin-right: auto;
+  margin-bottom: 2vmax;
 
-    margin-left: auto;
+  margin-left: auto;
 }
 
-.formController{
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
+.formController {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
 }
 
-
-
-input::placeholder{
-    color: black;
-font: bold 1.4vmax ;
+input::placeholder {
+  color: black;
+  font: bold 1.4vmax;
 }
 
 .formController > button {
-    margin-bottom: 5vmax;
-    cursor: pointer;
-background-color: blue;    border: 2px solid white;
-    border-radius: 0;
-padding:1vmax ;
-width:90%;
-font: 500 1.6vmax "Roboto";
-color: white;
+  margin-bottom: 5vmax;
+  cursor: pointer;
+  background-color: blue;
+  border: 2px solid white;
+  border-radius: 0;
+  padding: 1vmax;
+  width: 90%;
+  font: 500 1.6vmax "Roboto";
+  color: white;
 }
 
-
-.formController > input{
-    padding: 1vmax 4vmax;
-    padding-right: 1vmax;
-    width: 90%;
-    box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.267);
-    border-radius: 4px;
-    font: 600 1.2vmax cursive;
-    outline: none;
+.formController > input {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 90%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  font: 600 1.2vmax "Roboto";
+  outline: none;
 }
 
-.ForgotPassword{
-    margin: 0.3vmax;
-font: 900 1.5vmax "Roboto";
-color: rgb(255, 0, 0);
+.ForgotPassword {
+  margin: 0.3vmax;
+  font: 900 1.5vmax "Roboto";
+  color: rgb(255, 0, 0);
 }
 
 @media only screen and (max-width: 600px) {
-    input{
-        font: 400 1.5vmax cursive;
-width: 90%;
-    }
+  input {
+    font: 400 1.5vmax "Roboto";
+    width: 90%;
+  }
 
-    .subContainer{
-        margin-top: 8vmax;
+  .subContainer {
+    margin-top: 8vmax;
     /* margin-bottom: 5vmax; */
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
     border: 3px solid black;
-    }
+  }
 
-    button {
-    padding:1.3vmax ;
+  button {
+    padding: 1.3vmax;
     width: 9vmax;
     font: 500 1.4vmax "Roboto";
-    }
+  }
 
-    #registerImage > img {
-        width: 10vmax;
-        margin-bottom: 10px;
-      }
-    
-      #registerImage > input::file-selector-button {
-        height: 7vh;
-        font: 400 1.8vmax cursive;
-      }
+  #registerImage > img {
+    width: 10vmax;
+    margin-bottom: 10px;
+  }
 
+  #registerImage > input::file-selector-button {
+    height: 7vh;
+    font: 400 1.8vmax "Roboto";
+  }
 
-
-
-
-    .formController > div > svg{
-        font-size: 2vmax;
-margin: 1.5vmax;
-    }
-
+  .formController > div > svg {
+    font-size: 2vmax;
+    margin: 1.5vmax;
+  }
 }
-

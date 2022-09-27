@@ -6,7 +6,7 @@ import CartItemCard from "./CartItemCard.js"
 import RemoveShoppingCartTwoToneIcon from '@mui/icons-material/RemoveShoppingCartTwoTone';
 import { Link } from 'react-router-dom'
 import { Typography } from '@mui/material'
-
+import MetaData from "../../../MetaData"
 const Cart = ({ history }) => {
 
   const dispatch = useDispatch()
@@ -14,11 +14,13 @@ const Cart = ({ history }) => {
 
 
   const checkoutHandler = () => {
-    history.push("/login?redirect=shipping");
+    history.push("/login?redirect=/shipping");
   };
 
   return (
     <Fragment>
+      <MetaData title={"Cart Item"} />
+
       {cartItem.length === 0 ? (
         <div className='emptyCart'>
           <RemoveShoppingCartTwoToneIcon color='blue' />

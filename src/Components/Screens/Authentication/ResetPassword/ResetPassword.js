@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom'
 import { ResetPassword } from '../../../Redux/Actions/UserActions'
 import { useParams } from 'react-router-dom'
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
+import MetaData from '../../../../MetaData'
 
 const ResetUsersPassword = () => {
 
@@ -67,6 +68,7 @@ const ResetUsersPassword = () => {
     return (
         <Fragment>
             {loading ? <Loader /> : <div className="mainContainers">
+                <MetaData title={"Password Reset"} />
                 <div className="subContainers">
                     <h2>Reset Password</h2>
                     <div className="Form">

@@ -2,6 +2,7 @@ import { Typography } from '@material-ui/core'
 import React, { Fragment, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import MetaData from '../../../MetaData'
 import Loader from '../../config/Loader/loader'
 import { GetOrderDetail } from '../../Redux/Actions/OrderActions'
 import "./MyOrderDetail.css"
@@ -20,6 +21,8 @@ const MyorderDetails = ({ match }) => {
 
     return (
         <Fragment>
+            <MetaData title={"My Order Detail"} />
+
             {loading ? <Loader /> :
                 <div className="orderDetailsPage">
                     <div className="orderDetailsContainer">

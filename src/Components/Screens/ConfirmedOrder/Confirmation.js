@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { CreateOrder } from "../../Redux/Actions/OrderActions"
 import Loader from "../../config/Loader/loader"
 import Swal from "sweetalert2"
+import MetaData from "../../../MetaData"
 
 
 const Confirmation = ({ history }) => {
@@ -49,6 +50,7 @@ const Confirmation = ({ history }) => {
     return (
 
         <Fragment>
+            <MetaData title={"Confirm Order"} />
             {loading ? <Loader /> :
                 <Fragment>
                     <div className='checkout'>

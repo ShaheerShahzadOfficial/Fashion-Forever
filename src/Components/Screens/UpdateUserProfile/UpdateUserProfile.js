@@ -11,6 +11,7 @@ import { UPDATE_PROFILE_RESET } from '../../Redux/Constants/constant'
 import userpng from "../../Image/user.png"
 import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
 import AlternateEmailSharpIcon from '@mui/icons-material/AlternateEmailSharp';
+import MetaData from '../../../MetaData'
 const UpdateUserProfile = () => {
 
     const dispatch = useDispatch()
@@ -88,6 +89,7 @@ const UpdateUserProfile = () => {
 
     return (
         <Fragment>
+            <MetaData title={"Update Profile"} />
             {loading ? <Loader /> : <div className="mainContainers">
                 <div className="subContainers">
                     <h2 className='heading' style={{ width: "80%" }}>Update Your Profile</h2>

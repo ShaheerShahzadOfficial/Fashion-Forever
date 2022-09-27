@@ -9,6 +9,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import TransferWithinAStationIcon from '@mui/icons-material/TransferWithinAStation';
 import CheckOutStep from './CheckOutStep';
 import { ShippingInfo } from '../../Redux/Actions/CartActions';
+import MetaData from '../../../MetaData';
 const SaveShippingInfo = ({ history }) => {
 
     const { shippingInfo } = useSelector(state => state.cart)
@@ -34,6 +35,7 @@ const SaveShippingInfo = ({ history }) => {
 
     return (
         <Fragment>
+            <MetaData title={"Shipping Info"} />
 
             <div className='checkout'>
                 <CheckOutStep activeStep={0} />

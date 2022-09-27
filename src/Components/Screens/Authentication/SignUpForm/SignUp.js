@@ -9,6 +9,8 @@ import userpng from "../../../Image/user.png"
 import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
 import AlternateEmailSharpIcon from '@mui/icons-material/AlternateEmailSharp';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
+import MetaData from '../../../../MetaData'
+
 const SignUp = () => {
     const dispatch = useDispatch()
     const [UserName, setUserName] = useState("")
@@ -89,10 +91,12 @@ const SignUp = () => {
     return (
 
         <div className="mainContainer">
+            <MetaData title={"Register"} />
             {loading ? (
                 <Loader />) : (
 
                 <div className="subContainer">
+
                     <h2>Registration Form</h2>
                     <div className="formController">
 

@@ -5,6 +5,7 @@ import { ForgotPasswordEmail } from '../../../Redux/Actions/UserActions'
 import Swal from 'sweetalert2'
 import { FORGOT_PASSWORD_EMAIL_RESET } from '../../../Redux/Constants/constant'
 import AlternateEmailSharpIcon from '@mui/icons-material/AlternateEmailSharp';
+import MetaData from '../../../../MetaData'
 
 const ForgotPassword = () => {
     const [Email, setEmail] = useState("")
@@ -63,6 +64,7 @@ const ForgotPassword = () => {
 
     return (
         <div className="mainContainers">
+            <MetaData title={"Forget Password"} />
             <div className="subContainers">
                 <h2>Forgot Password</h2>
                 <div className="Form">

@@ -9,8 +9,8 @@ import ImportExportIcon from "@mui/icons-material/ImportExport";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PeopleIcon from "@mui/icons-material/People";
-import RateReviewIcon from "@mui/icons-material/RateReview";
-import logo from "../../../Components/Image/logo.png"
+// import RateReviewIcon from "@mui/icons-material/RateReview";
+import logo from "../../../Components/Image/Forever fashion.png"
 
 
 const Slider = () => {
@@ -52,12 +52,12 @@ const Slider = () => {
                     <PeopleIcon /> Users
                 </p>
             </Link>
-            <Link to={"/admin/reviews"}>
+            {/* <Link to={"/admin/reviews"}>
                 <p>
                     <RateReviewIcon />
                     Reviews
                 </p>
-            </Link>
+            </Link> */}
         </div>)
 }
 

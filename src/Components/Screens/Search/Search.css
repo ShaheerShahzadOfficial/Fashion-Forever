@@ -1,74 +1,84 @@
-.searchBox{
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(231, 231, 231);
-    position: fixed;
-    top: 0%;
-    left: 0;
+.searchBox {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(231, 231, 231);
+  position: fixed;
+  top: 0%;
+  left: 0;
 }
 
-.searchBox > input{
-    /* background-image: url(./../../Image/icons8-search-64.png); */
-    /* background-size: 30px; */
-    /* background-repeat: no-repeat; */
-    background-image: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.274);
-    background-color: white;
-    border: none;
-    color: rgba(0, 0, 0, 0.637);
-    padding: 1vmax 2vmax;
-    width: 50%;
-    outline: none;
-    border-radius: 0%;
-    font: 300 1.1vmax cursive;
-    box-sizing: border-box;
-    height: 8%;
+.searchBox > input {
+  /* background-image: url(./../../Image/icons8-search-64.png); */
+  /* background-size: 30px; */
+  /* background-repeat: no-repeat; */
+  background-image: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.274);
+  background-color: white;
+  border: none;
+  color: rgba(0, 0, 0, 0.637);
+  padding: 1vmax 2vmax;
+  width: 50%;
+  outline: none;
+  border-radius: 0%;
+  font: 300 1.1vmax "Roboto";
+  box-sizing: border-box;
+  height: 8%;
 }
 
-
-
-.searchBox > button{
-    cursor: pointer;
-    background-image: linear-gradient(to right top, #079ae7, #008fe9, #0084ea, #0077ea, #006ae7, #0075ef, #007ff7, #008aff, #00acff, #00caff, #00e4fe, #5ffbf1);    height: 100vmin;
-    height: 8%;
-    border-radius: 0%;
-    border: none;
-    padding: 1vmax;
-    width: 10%;
-    font: 300 1.1vmax "Roboto";
-    color: white;
+.searchBox > button {
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right top,
+    #079ae7,
+    #008fe9,
+    #0084ea,
+    #0077ea,
+    #006ae7,
+    #0075ef,
+    #007ff7,
+    #008aff,
+    #00acff,
+    #00caff,
+    #00e4fe,
+    #5ffbf1
+  );
+  height: 100vmin;
+  height: 8%;
+  border-radius: 0%;
+  border: none;
+  padding: 1vmax;
+  width: 10%;
+  font: 300 1.1vmax "Roboto";
+  color: white;
 }
 
-.searchBox > input::placeholder{
-    background-image: none;
-    color: grey;
-    font-size: 1.1vmax;
-    font-weight: bolder;
+.searchBox > input::placeholder {
+  background-image: none;
+  color: grey;
+  font-size: 1.1vmax;
+  font-weight: bolder;
 }
-
-
-
 
 @media screen and (max-width: 600px) {
-    .searchBox > input{
-      width: 100%;
-      font: bolder 2vmax "Roboto";
-      height: 10%;
-    }
-
-    .searchBox > input::placeholder{
-        /* width: 100%; */
-        font: bolder 2vmax "Roboto";
-        /* height: 10%; */
-      }
-  
-    .searchBox > button{
-      height: 10%;
-      width: 30%;
-      font: 300 4vw "Roboto";
-    }
+  .searchBox > input {
+    width: 100%;
+    font: bolder 2vmax "Roboto";
+    height: 10%;
   }
+
+  .searchBox > input::placeholder {
+    /* width: 100%; */
+    font: bolder 2vmax "Roboto";
+    /* height: 10%; */
+  }
+
+  .searchBox > button {
+    height: 10%;
+    width: 30%;
+    font: 300 4vw "Roboto";
+  }
+}

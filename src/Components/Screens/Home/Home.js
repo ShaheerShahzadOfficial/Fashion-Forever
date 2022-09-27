@@ -6,6 +6,8 @@ import { GetProduct } from '../../Redux/Actions/ProductsActions'
 import { useDispatch, useSelector } from 'react-redux'
 // import { Circles } from 'react-loader-spinner'
 import Loader from '../../config/Loader/loader'
+import MetaData from "../../../MetaData"
+import { Link } from 'react-router-dom'
 const Home = () => {
 
     const dispatch = useDispatch()
@@ -31,6 +33,7 @@ const Home = () => {
 
     return (
         <Fragment>
+            <MetaData title={"Home "} />
             <div className="banner">
                 <h3>Welcome to Forever Fashion</h3>
                 <h1>
@@ -54,14 +57,14 @@ const Home = () => {
                         ))
                     )
                 }
-                {/* {
-                    products && products.map(products => (
-                        <Product product={products} />
-                    ))
-                } */}
+
 
             </div>
-
+            <div  className='Explore'>
+                <Link to="/products">
+                <button>Explore More</button>
+                </Link>
+            </div>
         </Fragment>
     )
 }

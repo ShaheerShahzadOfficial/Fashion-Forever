@@ -12,7 +12,7 @@ import { DialogTitle } from "@material-ui/core"
 import Loader from "../../config/Loader/loader"
 import { AddToCart } from "../../Redux/Actions/CartActions"
 import Swal from "sweetalert2"
-
+import MetaData from "../../../MetaData"
 const ProductDetails = () => {
     const [ProdutDetail, setProductDetail] = useState([])
     const [quantity, setQuantity] = useState(1)
@@ -89,6 +89,7 @@ const ProductDetails = () => {
 
     return (
         <Fragment>
+            <MetaData title={"Product Details"} />
             {loading ? (
                 <Loader />) : (
                 ProdutDetail && ProdutDetail.map((items, i) => (
@@ -96,6 +97,9 @@ const ProductDetails = () => {
                         <h2 style={{ "textAlign": "center" }}>Product Detail</h2>
 
                         <div className="card">
+
+                        <div className="ProductsImages">
+
                             <Carousel className="Carousel" showThumbs={false} showArrows={true} autoPlay={true} showStatus={true} infiniteLoop={true} interval={5000} dynamicHeight={true}>
                                 {
                                     product?.images && product?.images?.map((item, i) => (
@@ -103,11 +107,17 @@ const ProductDetails = () => {
                                     ))
                                 }
                             </Carousel>
+</div>
+
+<div className="Details">
 
                             <h2>Name: {items?.name}</h2>
                             <p className="price">Price: Rs {items?.price}</p>
+                            <br />
                             <p><strong>Description: </strong> {items?.description}</p>
+                            <br />
                             <p><b> Status </b> <b className={items?.Stock < 1 ? "Red" : "Green"}>{items?.Stock < 1 ? "Out Of  Stock" : "InStock"}</b></p>
+                           <br />
                             <div className="quantityIncrease">
 
                                 <div className="detailsBlock-3-1">
@@ -128,6 +138,8 @@ const ProductDetails = () => {
 
                                 </div>
                             </div>
+
+                        </div>
 
                         </div>
                     </div>

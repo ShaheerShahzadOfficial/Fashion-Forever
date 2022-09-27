@@ -6,7 +6,7 @@ const Product = ({ product }) => {
     const options = {
         edit: false,
         color: "grey",
-        activeColor: "blue",
+        activeColor: "rgb(255, 0, 76)",
         size: window.innerWidth < 600 ? 15 : 25,
         value: product?.Ratings,
         isHalf: true

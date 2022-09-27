@@ -55,7 +55,7 @@ export const ForgotPasswordEmail = (email) => async (dispatch) => {
 
     await axios.post("https://foreverfashion.herokuapp.com/user/resetPassword", {
         email
-    }, { withCredentials: true, }).then((result) => {
+    }, { withCredentials: true, credentials: "include" }).then((result) => {
         dispatch({
             type: FORGOT_PASSWORD_EMAIL,
             payload: result.data
@@ -75,7 +75,7 @@ export const ForgotPasswordEmail = (email) => async (dispatch) => {
 export const Logout = () => async (dispatch) => {
 
     await axios.get("https://foreverfashion.herokuapp.com/user/logout", {
-        withCredentials: true,
+        withCredentials: true, credentials: "include"
     }).then(() => {
         dispatch({
             type: LOGOUT_USER,
