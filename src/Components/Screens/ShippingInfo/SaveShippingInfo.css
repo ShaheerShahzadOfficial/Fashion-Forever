@@ -52,21 +52,7 @@
 
 .shippingBtn {
   border: none;
-  background-image: linear-gradient(
-    to right top,
-    #079ae7,
-    #008fe9,
-    #0084ea,
-    #0077ea,
-    #006ae7,
-    #0075ef,
-    #007ff7,
-    #008aff,
-    #00acff,
-    #00caff,
-    #00e4fe,
-    #5ffbf1
-  );
+  background-color:  rgb(255, 0, 76);
   color: white;
   font: 500 2vmax "Roboto";
   width: 80%;
@@ -79,7 +65,7 @@
 }
 
 .shippingBtn:hover {
-  background-color: rgb(0, 47, 255);
+  background-color:  rgb(163, 0, 49);;
 }
 
 @media only screen and (max-width: 600px) {

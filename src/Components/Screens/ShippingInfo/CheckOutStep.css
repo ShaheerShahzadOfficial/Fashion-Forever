@@ -8,9 +8,9 @@
   }
 
   .MuiStepConnector-active{
-    background-color: rgb(0, 102, 255);
+    background-color: rgb(255, 90, 140);
   }
   
   .MuiStepConnector-completed {
-    background-color: blue;
+    background-color: rgb(255, 0, 76);
   }

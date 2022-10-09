@@ -117,7 +117,7 @@
   
   .placeOrderBtn {
     border: none;
-    background-image: linear-gradient(to right top, #079ae7, #008fe9, #0084ea, #0077ea, #006ae7, #0075ef, #007ff7, #008aff, #00acff, #00caff, #00e4fe, #5ffbf1);
+    background-color: rgb(255, 0, 76);
   color: white;
   width: 100%;
   padding: 1.5vmax;

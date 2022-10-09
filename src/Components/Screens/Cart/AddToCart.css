@@ -10,7 +10,7 @@
 }
 .emptyCart > svg {
   font-size: 6vmax;
-  color: blue;
+  color: rgb(255, 0, 76);
 }
 .emptyCart > p {
   font: 600 1.8vmax "Roboto";
@@ -38,7 +38,7 @@
 }
 
 .cartHeader{
-  background-image: linear-gradient(to right top, #079ae7, #008fe9, #0084ea, #0077ea, #006ae7, #0075ef, #007ff7, #008aff, #00acff, #00caff, #00e4fe, #5ffbf1);
+  background: linear-gradient(90deg, rgba(255,148,177,1) 0%, rgba(250,105,127,1) 51%, rgba(245,86,134,1) 100%);
   width: 90%;
     box-sizing: border-box;
     color: white;
@@ -119,7 +119,7 @@ align-items: center;
     grid-template-columns: 2fr 1.2fr;
 }
 .GrossTotalBox{
-    border-top: 3px solid blue;
+    border-top: 3px solid rgb(255, 0, 76);
     box-sizing: border-box;
     justify-content: space-between;
     margin: 1vmax  4vmax;
@@ -134,7 +134,7 @@ align-items: center;
 }
 
 .CheckOutBtn > button{
-background-color: black;  color: white;
+background-color: rgb(255, 0, 76);  color: white;
     border: none;
     border-radius: 30px;
     padding: 0.8vmax 4vmax;

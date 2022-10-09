@@ -28,6 +28,8 @@ const AddNewProduct = ({ history }) => {
         "Gadgets",
         "Bags",
         "Ladies Clothes",
+        "Shoes",
+        "jewellery"
     ];
 
     const dispatch = useDispatch()

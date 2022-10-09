@@ -44,7 +44,9 @@ const Products = () => {
     const Categories = [
         "Gadgets",
         "Bags",
-        "Ladies Clothes"
+        "Ladies Clothes",
+        "Shoes",
+        "jewellery"
     ]
 
 

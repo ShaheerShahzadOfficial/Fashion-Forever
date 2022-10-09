@@ -136,7 +136,7 @@ const deleteOrder = (id) => async (dispatch) => {
     dispatch({ type: DELETE_ORDER_REQUEST });
 
 
-    await axios.delete(`https://foreverfashion.herokuapp.com/order/admin/deleteOrder//${id}`).then((result) => {
+    await axios.delete(`https://foreverfashion.herokuapp.com/order/admin/deleteOrder/${id}`).then((result) => {
         dispatch({
             type: DELETE_ORDER,
             payload: result.data.success,

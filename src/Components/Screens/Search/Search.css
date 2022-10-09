@@ -31,28 +31,15 @@
 
 .searchBox > button {
   cursor: pointer;
-  background-image: linear-gradient(
-    to right top,
-    #079ae7,
-    #008fe9,
-    #0084ea,
-    #0077ea,
-    #006ae7,
-    #0075ef,
-    #007ff7,
-    #008aff,
-    #00acff,
-    #00caff,
-    #00e4fe,
-    #5ffbf1
-  );
+  background: linear-gradient(90deg, rgba(255,148,177,1) 0%, rgba(250,105,127,1) 51%, rgba(245,86,134,1) 100%);
+
   height: 100vmin;
   height: 8%;
   border-radius: 0%;
   border: none;
   padding: 1vmax;
   width: 10%;
-  font: 300 1.1vmax "Roboto";
+  font: 600 1.2vmax "Roboto";
   color: white;
 }
 

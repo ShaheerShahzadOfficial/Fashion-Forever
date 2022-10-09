@@ -22,20 +22,18 @@
 }
 
 .productCard {
+  width: 16vmax;
   display: flex;
   flex-direction: column;
-  width: 18vmax;
   text-decoration: none;
-  color: rgb(48, 48, 48);
+  color: #303030;
   margin: 2vmax;
-  transition: all 0.5s;
+  transition: all .5s;
   padding-bottom: 0.5vmax;
-  box-shadow: 2px 1px 5px 5px #ebe6e6;
-  /* margin: auto; */
 }
 
 .productCard > img {
-  width: 18vmax;
+  width: 100%;
   height: 22vmax;
   font-size: 1.6vmax;
 }
@@ -64,7 +62,7 @@
 }
 
 .productCard:hover {
-  box-shadow: 2px 1px 5px 5px #c0b8b8;
+  box-shadow: 2px 1px 5px 5px #f4f4f4;
   transform: translateY(-1vmax);
 }
 
@@ -122,11 +120,10 @@
 }
 
 .filterBox {
-  width: 10vmax;
-  /* width: 10vmax; */
-  position: absolute;
-  top: 15vmax;
-  left: 3vmax;
+  width: 20vmax;
+  top: 8vmax;
+  margin: auto;
+  position: static;
 }
 
 .filterName {
@@ -156,7 +153,7 @@
   color: blue;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 770px) {
   .page-link {
     font: bolder 1.7vmax "Roboto";
   }

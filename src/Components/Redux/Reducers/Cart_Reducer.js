@@ -3,7 +3,7 @@ import { ADD_TO_CART, REMOVE_FROM_CART, SAVE_SHIPPING_INFO } from "../Constants/
 let initialState = {
     shippingInfo: {},
 
-    // cartItem: [],
+    cartItem: [],
 }
 
 export function CartReducer(state = initialState, actions) {
