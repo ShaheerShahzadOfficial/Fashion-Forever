@@ -136,7 +136,12 @@ const deleteOrder = (id) => async (dispatch) => {
     dispatch({ type: DELETE_ORDER_REQUEST });
 
 
-    await axios.delete(`https://foreverfashion.herokuapp.com/order/admin/deleteOrder/${id}`).then((result) => {
+    await axios.delete(`https://foreverfashion.herokuapp.com/order/admin/deleteOrder/${id}`,
+    {
+        withCredentials: true,
+        credentials: "include",
+        headers: { "Content-Type": "application/json" }
+    }).then((result) => {
         dispatch({
             type: DELETE_ORDER,
             payload: result.data.success,
@@ -156,7 +161,13 @@ const UpdateOrderStatus = (id, status) => async (dispatch) => {
     dispatch({ type: UPDATE_ORDER_REQUEST });
 
 
-    await axios.put(`https://foreverfashion.herokuapp.com/order/admin/updateOrderStatus/${id}`, { status }).then((result) => {
+    await axios.put(`https://foreverfashion.herokuapp.com/order/admin/updateOrderStatus/${id}`, { status },
+    {
+        withCredentials: true,
+        credentials: "include",
+        headers: { "Content-Type": "application/json" }
+    }
+    ).then((result) => {
         dispatch({
             type: UPDATE_ORDER,
             payload: result.data.success,
