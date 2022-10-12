@@ -36,6 +36,7 @@ import UpdateUser from './Admin/Users/Update/updateUser';
 import OrdersList from './Admin/Orders/OrdersList';
 import UpdateOrder from './Admin/Orders/UpdateOrder/UpdateOrder';
 import WhatApp from './Components/config/WhatsApp/WhatApp';
+import Error from "./Error/Error"
 function App() {
   const dispatch = useDispatch()
 
@@ -82,6 +83,12 @@ function App() {
         <ProtectedRoutes isAdmin={true} exact path={"/admin/UpdateUser/:id"} component={UpdateUser} />
         <ProtectedRoutes isAdmin={true} exact path={"/admin/orders"} component={OrdersList} />
         <ProtectedRoutes isAdmin={true} exact path={"/admin/UpdateOrder/:id"} component={UpdateOrder} />
+        <Route
+            path="*"
+            component={
+              Error
+            }
+          />
       </Switch>
 
 
