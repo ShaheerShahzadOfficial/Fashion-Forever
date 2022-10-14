@@ -55,11 +55,14 @@ font-weight: 400;
     color: #fff;
     border: none;
     box-shadow: 0 4px 8px 0 #ccc;
+    width: auto;
   }
-  @media screen and (max-width: 770px) {
-
+  @media screen and (max-width: 900px) {
+    .Error{
+      margin-bottom: -20vh;
+    }
   .wrapper {
-    padding-top: 9vmax;
+    padding-top: 0vmax;
     /* max-width: 100%; */
     width: 94%; 
     /* margin:auto; */
