@@ -46,7 +46,7 @@ input::placeholder {
 .formController > button {
   margin-bottom: 5vmax;
   cursor: pointer;
-  background-color: blue;
+  background-color: rgb(0, 0, 0);
   border: 2px solid white;
   border-radius: 0;
   padding: 1vmax;
@@ -104,7 +104,12 @@ input::placeholder {
   }
 
   .formController > div > svg {
-    font-size: 2vmax;
-    margin: 1.5vmax;
+    font-size: 3vmax;
+    position: absolute;
+    margin-top: 0vmax;
+    margin-left: 1vmax;
+    margin-bottom: 2vmax;
+    align-items: center;
+    color: black;
   }
 }

@@ -5,11 +5,12 @@ import { RegisterUser } from '../../../Redux/Actions/UserActions'
 import { Link, useHistory } from 'react-router-dom'
 import Loader from '../../../config/Loader/loader'
 import Swal from 'sweetalert2'
-import userpng from "../../../Image/user.png"
+
 import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
 import AlternateEmailSharpIcon from '@mui/icons-material/AlternateEmailSharp';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import MetaData from '../../../../MetaData'
+import { Avatar } from '@mui/material'
 
 const SignUp = () => {
     const dispatch = useDispatch()
@@ -19,8 +20,8 @@ const SignUp = () => {
     const [ConfirmPassword, setConfirmPassword] = useState("")
 
     const { loading, error, isAuthenticated } = useSelector(state => state.Authentication)
-    const [avatarPreview, setAvatarPreview] = useState(userpng)
-    const [avatar, setAvatar] = useState(userpng)
+    const [avatarPreview, setAvatarPreview] = useState("")
+    const [avatar, setAvatar] = useState("")
     let history = useHistory()
 
     useEffect(() => {
@@ -63,7 +64,7 @@ const SignUp = () => {
         const email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         const Pass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,16}$/;
 
-        if (UserName !== "" && Email !== "" && Password !== "" && ConfirmPassword !== "") {
+        if (UserName !== "" && Email !== "" && Password !== "" && ConfirmPassword !== "" && avatar !== "") {
 
             if (email.test(Email) === true) {
                 if (Pass.test(Password) === true) {
@@ -84,7 +85,7 @@ const SignUp = () => {
             }
 
         } else {
-            Swal.fire("Presence Alert", "Enter  UserName  Email And Password", "warning")
+            Swal.fire("Presence Alert", "Enter  UserName  Email  Password And Avatar", "warning")
         }
     }
 
@@ -127,7 +128,11 @@ const SignUp = () => {
                         <br />
                         <br />
                         <div id="registerImage">
-                            <img src={avatarPreview} alt="Avatar Preview" />
+                            <Avatar src={avatarPreview} sx={{
+                              width: "10vmax",
+                              height:"10vmax",
+                              marginBottom: "6px",
+                            }}/>
                             <input
                                 type="file"
                                 name="avatar"
