@@ -104,10 +104,11 @@ input::placeholder {
   }
 
   .formController > div > svg {
-    font-size: 3vmax;
+    font-size: 2.6vmax;
     position: absolute;
-    margin-top: 0vmax;
+    margin-top: 0.6vmax;
     margin-left: 1vmax;
+    margin-right: 1vmax;
     margin-bottom: 2vmax;
     align-items: center;
     color: black;
