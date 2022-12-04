@@ -25,7 +25,7 @@ const UpdateOrder = ({ history }) => {
     const { id } = useParams()
     const dispatch = useDispatch()
     useEffect(() => {
-        if (orderDetails && orderDetails._id !== id) {
+        if (orderDetails && orderDetails?._id !== id) {
             dispatch(GetOrderDetail(id));
         }
 

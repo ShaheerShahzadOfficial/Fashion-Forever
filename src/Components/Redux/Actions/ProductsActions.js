@@ -27,10 +27,10 @@ export const GetProduct = (keyword = "", CurrentPage = 1, Price = [1000, 25000],
         type: ALL_PRODUCT_REQUEST
     })
 
-    let link = `https://foreverfashion.herokuapp.com/products/getProduct?keyword=${keyword}&page=${CurrentPage}&price[gte]=${Price[0]}&price[lte]=${Price[1]}`
+    let link = `https://forever-fashion-backend.vercel.app/products/getProduct?keyword=${keyword}&page=${CurrentPage}&price[gte]=${Price[0]}&price[lte]=${Price[1]}`
 
     if (Category) {
-        link = `https://foreverfashion.herokuapp.com/products/getProduct?keyword=${keyword}&page=${CurrentPage}&price[gte]=${Price[0]}&price[lte]=${Price[1]}&category=${Category}`
+        link = `https://forever-fashion-backend.vercel.app/products/getProduct?keyword=${keyword}&page=${CurrentPage}&price[gte]=${Price[0]}&price[lte]=${Price[1]}&category=${Category}`
     }
 
     await axios.get(link).then((result) => {
@@ -58,7 +58,7 @@ export const GetProductDetail = (id) => async (dispatch) => {
         type: PRODUCT_DETAIL_REQUEST
     })
 
-    await axios.get(`https://foreverfashion.herokuapp.com/products/ProductDetail/${id}`).then((result) => {
+    await axios.get(`https://forever-fashion-backend.vercel.app/products/ProductDetail/${id}`).then((result) => {
         dispatch({
             type: PRODUCT_DETAIL_SUCCESS,
             payload: result.data
@@ -85,7 +85,7 @@ export const ClearError = () => async (dispatch) => {
 
 export const AddReviews = (productId, rating, comment) => async (dispatch) => {
 
-    await axios.put("https://foreverfashion.herokuapp.com/products/addProductReview", {
+    await axios.put("https://forever-fashion-backend.vercel.app/products/addProductReview", {
         productId,
         rating,
         comment
@@ -111,7 +111,7 @@ export const CreateNewProduct = (name, description, price, category, Stock, imag
     dispatch({
         type: CREATE_NEW_PRODUCT_REQUEST
     })
-    await axios.post("https://foreverfashion.herokuapp.com/products/newProduct", {
+    await axios.post("https://forever-fashion-backend.vercel.app/products/newProduct", {
         name, description, price, category, Stock, images
     }, { withCredentials: true, credentials: "include", headers: { "Content-Type": "application/json" } }).then((result) => {
         dispatch({
@@ -133,7 +133,7 @@ export const GetAdminProduct = () => async (dispatch) => {
         type: ADMIN_PRODUCT_REQUEST
     })
 
-    await axios.get("https://foreverfashion.herokuapp.com/products/admin/getProduct",
+    await axios.get("https://forever-fashion-backend.vercel.app/products/admin/getProduct",
         { withCredentials: true, credentials: "include", headers: { "Content-Type": "application/json" } }
     ).then((result) => {
         dispatch({
@@ -158,9 +158,9 @@ export const GetAdminProduct = () => async (dispatch) => {
 
 export const deleteProduct = (id) => async (dispatch) => {
     dispatch({ type: DELETE_PRODUCT_REQUEST });
-    // https://foreverfashion.herokuapp.com
+    // http://localhost:4000
 
-    await axios.delete(`https://foreverfashion.herokuapp.com/products/deleteProduct/${id}`,
+    await axios.delete(`https://forever-fashion-backend.vercel.app/products/deleteProduct/${id}`,
         { withCredentials: true, credentials: "include", headers: { "Content-Type": "application/json" } }).then((result) => {
             dispatch({
                 type: DELETE_PRODUCT_SUCCESS,
@@ -182,7 +182,7 @@ export const updateProduct = (id, name, price, description, category, Stock, ima
     dispatch({ type: UPDATE_PRODUCT_REQUEST });
 
 
-    await axios.put(`https://foreverfashion.herokuapp.com/products/updateProduct/${id}`, {
+    await axios.put(`https://forever-fashion-backend.vercel.app/products/updateProduct/${id}`, {
         name, price, description, category, Stock, images
     }, { withCredentials: true, credentials: "include", headers: { "Content-Type": "application/json" } }).then((result) => {
         dispatch({

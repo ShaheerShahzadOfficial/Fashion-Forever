@@ -13,7 +13,7 @@ const CreateOrder = (
         })
 
 
-        axios.post("https://foreverfashion.herokuapp.com/order/createOrder",
+        axios.post("https://forever-fashion-backend.vercel.app/order/createOrder",
             {
                 shippingInfo,
                 orderItem,
@@ -50,7 +50,7 @@ const MyOrder = () => async (dispatch) => {
     })
 
 
-    axios.get("https://foreverfashion.herokuapp.com/order/myOrder",
+    axios.get("https://forever-fashion-backend.vercel.app/order/myOrder",
 
         {
             withCredentials: true,
@@ -80,7 +80,7 @@ const GetOrderDetail = (id) => async (dispatch) => {
     })
 
 
-    axios.get(`https://foreverfashion.herokuapp.com/order/getOrderDetail/${id}`,
+    axios.get(`https://forever-fashion-backend.vercel.app/order/getOrderDetail/${id}`,
 
         {
             withCredentials: true,
@@ -109,7 +109,7 @@ const AdminAllOrder = () => async (dispatch) => {
     })
 
 
-    axios.get("https://foreverfashion.herokuapp.com/order/myOrder",
+    axios.get("https://forever-fashion-backend.vercel.app/order/myOrder",
 
         {
             withCredentials: true,
@@ -136,7 +136,7 @@ const deleteOrder = (id) => async (dispatch) => {
     dispatch({ type: DELETE_ORDER_REQUEST });
 
 
-    await axios.delete(`https://foreverfashion.herokuapp.com/order/admin/deleteOrder/${id}`,
+    await axios.delete(`https://forever-fashion-backend.vercel.app/order/admin/deleteOrder/${id}`,
     {
         withCredentials: true,
         credentials: "include",
@@ -161,7 +161,7 @@ const UpdateOrderStatus = (id, status) => async (dispatch) => {
     dispatch({ type: UPDATE_ORDER_REQUEST });
 
 
-    await axios.put(`https://foreverfashion.herokuapp.com/order/admin/updateOrderStatus/${id}`, { status },
+    await axios.put(`https://forever-fashion-backend.vercel.app/order/admin/updateOrderStatus/${id}`, { status },
     {
         withCredentials: true,
         credentials: "include",

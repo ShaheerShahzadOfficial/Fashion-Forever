@@ -2,7 +2,7 @@ import axios from "axios";
 import { ADD_TO_CART, REMOVE_FROM_CART, SAVE_SHIPPING_INFO } from "../Constants/constant";
 
 const AddToCart = (id, quantity) => async (dispatch, getState) => {
-    await axios.get(`https://foreverfashion.herokuapp.com/products/ProductDetail/${id}`, {
+    await axios.get(`https://forever-fashion-backend.vercel.app/products/ProductDetail/${id}`, {
         id, quantity
     }, { withCredentials: true, credentials: "include" }).then((result) => {
         dispatch({

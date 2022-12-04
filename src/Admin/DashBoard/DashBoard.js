@@ -47,7 +47,7 @@ const DashBoard = () => {
                 backgroundColor: ["tomato"],
                 hoverBackgroundColor: ["rgb(197, 72, 49)"],
                 data: [0, order && order?.reduce(
-                    (acc, item) => acc + item.totalPrice,
+                    (acc, item) => acc + item?.totalPrice,
                     0
                 )],
                 borderWidth: 1,
@@ -65,7 +65,7 @@ const DashBoard = () => {
                 backgroundColor: ["cyan", "blue"],
                 hoverBackgroundColor: ["darkcyan", "darkblue"],
                 // products.length
-                data: [outOfStock, products.length - outOfStock],
+                data: [outOfStock, products?.length - outOfStock],
             },
         ],
     };
@@ -82,7 +82,7 @@ const DashBoard = () => {
                 <div className="dashboardSummary">
                     <div>
                         <p> Total Amount <br /> Rs {order && order?.reduce(
-                            (acc, item) => acc + item.totalPrice,
+                            (acc, item) => acc + item?.totalPrice,
                             0
                         )}  </p>
                     </div>
@@ -107,10 +107,7 @@ const DashBoard = () => {
                     </div>
                 </div>
 
-                {/* <div className="lineChart">
-                    <Line
-                        data={lineState} />
-                </div> */}
+
 
                 <div className="lineChart">
                     <Line data={lineState}>

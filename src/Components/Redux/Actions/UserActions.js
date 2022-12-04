@@ -8,7 +8,7 @@ export const RegisterUser = (name, email, password, avatar) => async (dispatch) 
 
     const config = { headers: { "Content-Type": "multipart/form-data" } };
 
-    await axios.post("https://foreverfashion.herokuapp.com/user/register", {
+    await axios.post("https://forever-fashion-backend.vercel.app/user/register", {
         name, email, password, avatar
     }, config).then((result) => {
         dispatch({
@@ -32,7 +32,7 @@ export const Login = (email, password) => async (dispatch) => {
 
     // const config = { headers: { "Content-Type": "application/json" } }
 
-    await axios.post("https://foreverfashion.herokuapp.com/user/login", {
+    await axios.post("https://forever-fashion-backend.vercel.app/user/login", {
         email, password
     }, { withCredentials: true, credentials: "include", headers: { "Content-Type": "application/json" } }).then((result) => {
         dispatch({
@@ -53,7 +53,7 @@ export const Login = (email, password) => async (dispatch) => {
 
 export const ForgotPasswordEmail = (email) => async (dispatch) => {
 
-    await axios.post("https://foreverfashion.herokuapp.com/user/resetPassword", {
+    await axios.post("https://forever-fashion-backend.vercel.app/user/resetPassword", {
         email
     }, { withCredentials: true, credentials: "include" }).then((result) => {
         dispatch({
@@ -74,7 +74,7 @@ export const ForgotPasswordEmail = (email) => async (dispatch) => {
 
 export const Logout = () => async (dispatch) => {
 
-    await axios.get("https://foreverfashion.herokuapp.com/user/logout", {
+    await axios.get("https://forever-fashion-backend.vercel.app/user/logout", {
         withCredentials: true, credentials: "include"
     }).then(() => {
         dispatch({
@@ -98,7 +98,7 @@ export const LoadUser = () => async (dispatch) => {
         dispatch({ type: LOAD_USER_REQUEST });
 
 
-        const { data } = await axios.get("https://foreverfashion.herokuapp.com/user/userDetails", { withCredentials: true, credentials: "include" })
+        const { data } = await axios.get("https://forever-fashion-backend.vercel.app/user/userDetails", { withCredentials: true, credentials: "include" })
         dispatch({
             type: LOAD_USER,
             payload: data.user
@@ -118,7 +118,7 @@ export const UpdateProfile = (name, email) => async (dispatch) => {
     dispatch({ type: UPDATE_PROFILE_REQUEST });
 
 
-    await axios.put("https://foreverfashion.herokuapp.com/user/UpdateUserProfile", {
+    await axios.put("https://forever-fashion-backend.vercel.app/user/UpdateUserProfile", {
         name, email
     }, { withCredentials: true, credentials: "include" }).then((result) => {
         dispatch({
@@ -139,7 +139,7 @@ export const UpdatePassword = (newPassword, confirmPassword) => async (dispatch)
     dispatch({ type: UPDATE_PASSWORD_REQUEST });
 
 
-    await axios.put("https://foreverfashion.herokuapp.com/user/UpdatePassword", {
+    await axios.put("https://forever-fashion-backend.vercel.app/user/UpdatePassword", {
         newPassword, confirmPassword
     }, { withCredentials: true, credentials: "include" }).then((result) => {
         dispatch({
@@ -160,7 +160,7 @@ export const ResetPassword = (token, password, confirmPassword) => async (dispat
     dispatch({ type: RESET_PASSWORD_EMAIL_REQUEST });
 
 
-    await axios.put(`https://foreverfashion.herokuapp.com/user/resetPassword/${token}`, {
+    await axios.put(`https://forever-fashion-backend.vercel.app/user/resetPassword/${token}`, {
         password, confirmPassword
     }, { withCredentials: true, credentials: "include" }).then((result) => {
         dispatch({
@@ -181,7 +181,7 @@ export const ResetPassword = (token, password, confirmPassword) => async (dispat
 export const AdminAllUser = () => async (dispatch) => {
     dispatch({ type: ADMIN_ALL_USERS_REQUEST })
 
-    await axios.get("https://foreverfashion.herokuapp.com/user/GetAllUser", { withCredentials: true, credentials: "include" }).then((result) => {
+    await axios.get("https://forever-fashion-backend.vercel.app/user/GetAllUser", { withCredentials: true, credentials: "include" }).then((result) => {
         dispatch({
             type: ADMIN_ALL_USERS_SUCCESS,
             payload: result.data.user
@@ -198,7 +198,7 @@ export const AdminAllUser = () => async (dispatch) => {
 export const DeleteUser = (id) => async (dispatch) => {
     dispatch({ type: ADMIN_DELETE_USERS_REQUEST })
 
-    await axios.delete(`https://foreverfashion.herokuapp.com/user/DeleteUser/${id}`, { withCredentials: true, credentials: "include" }).then((result) => {
+    await axios.delete(`https://forever-fashion-backend.vercel.app/user/DeleteUser/${id}`, { withCredentials: true, credentials: "include" }).then((result) => {
         dispatch({
             type: ADMIN_DELETE_USERS_SUCCESS,
             payload: result.data.success
@@ -215,7 +215,7 @@ export const DeleteUser = (id) => async (dispatch) => {
 export const UpdateUserRole = (id, name, email, role) => async (dispatch) => {
     dispatch({ type: ADMIN_UPDATE_USERS_REQUEST })
 
-    await axios.put(`https://foreverfashion.herokuapp.com/user/UpdateUserRole/${id}`, {
+    await axios.put(`https://forever-fashion-backend.vercel.app/user/UpdateUserRole/${id}`, {
         name, email, role
     }, { withCredentials: true, credentials: "include" }).then((result) => {
         dispatch({
@@ -237,7 +237,7 @@ export const UpdateUserRole = (id, name, email, role) => async (dispatch) => {
 export const getUserDetails = (id) => async (dispatch) => {
     dispatch({ type: USER_DETAILS_REQUEST })
 
-    await axios.get(`https://foreverfashion.herokuapp.com/user/GetSingleUser/${id}`, { withCredentials: true, credentials: "include" }).then((result) => {
+    await axios.get(`https://forever-fashion-backend.vercel.app/user/GetSingleUser/${id}`, { withCredentials: true, credentials: "include" }).then((result) => {
         dispatch({
             type: USER_DETAILS,
             payload: result.data.user
@@ -260,7 +260,7 @@ export const getUserDetails = (id) => async (dispatch) => {
 export const GetSingleUser = (id) => async (dispatch) => {
     dispatch({ type: LOAD_USER_REQUEST })
 
-    await axios.get(`https://foreverfashion.herokuapp.com/user/GetSingleUser/${id}`, { withCredentials: true, credentials: "include" }).then((result) => {
+    await axios.get(`https://forever-fashion-backend.vercel.app/user/GetSingleUser/${id}`, { withCredentials: true, credentials: "include" }).then((result) => {
         dispatch({
             type: LOAD_USER,
             payload: result.data.user
